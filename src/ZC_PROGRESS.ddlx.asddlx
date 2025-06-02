@@ -1,0 +1,61 @@
+@Metadata.layer: #CORE
+@UI: {
+    headerInfo: {
+        typeName: 'Progress',
+        typeNamePlural: 'Progress Entries',
+        title: { type: #STANDARD, value: 'ProgressId' },
+        description: { type: #STANDARD, value: 'UserId' }
+    }
+}
+annotate view ZC_Progress_MWW25 with {
+    @UI.facet: [
+        {
+            id: 'Progress',
+            purpose: #STANDARD,
+            type: #IDENTIFICATION_REFERENCE,
+            label: 'Progress Details',
+            position: 10
+        },
+        {
+            id: 'Course',
+            purpose: #STANDARD,
+            type: #LINEITEM_REFERENCE,
+            label: 'Course Information',
+            position: 20,
+            targetElement: '_Course'
+        }
+    ]
+
+    @UI: {
+        lineItem: [{ position: 10, importance: #HIGH }],
+        identification: [{ position: 10 }]
+    }
+    ProgressId;
+
+    @UI: {
+        lineItem: [{ position: 20, importance: #HIGH }],
+        identification: [{ position: 20 }],
+        selectionField: [{ position: 10 }]
+    }
+    UserId;
+
+    @UI: {
+        lineItem: [{ position: 30, importance: #HIGH }],
+        identification: [{ position: 30 }],
+        selectionField: [{ position: 20 }]
+    }
+    CourseId;
+
+    @UI: {
+        lineItem: [{ position: 40, importance: #MEDIUM, label: 'Completion %' }],
+        identification: [{ position: 40, label: 'Completion %' }]
+    }
+    PercentComplete;
+
+    @UI: {
+        lineItem: [{ position: 50, importance: #MEDIUM }],
+        identification: [{ position: 50 }],
+        selectionField: [{ position: 30 }]
+    }
+    Status;
+}

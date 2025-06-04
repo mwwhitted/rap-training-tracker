@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ddls:ddlsXml xmlns:ddls="http://www.sap.com/abapgit/ddls">
   <ddls:metaData>
-    <ddls:name>ZDE_ELEMENTS_MWW25</ddls:name>
+    <ddls:name>ZDE_ELEMENTS_MWW25A</ddls:name>
     <ddls:description>Stub metadata for ZDE_ELEMENTS_MWW25</ddls:description>
-    <ddls:package>ZMMWW25</ddls:package>
+    <ddls:package>ZMMWW25A</ddls:package>
     <ddls:objectType>DDLS</ddls:objectType>
   </ddls:metaData>
 </ddls:ddlsXml>

@@ -2,7 +2,7 @@
 <ddls:ddlsXml xmlns:ddls="http://www.sap.com/abapgit/ddls">
   <ddls:metaData>
     <ddls:name>ZDE_ELEMENTS_MWW25A</ddls:name>
-    <ddls:description>Stub metadata for ZDE_ELEMENTS_MWW25</ddls:description>
+    <ddls:description>Stub metadata for ZDE_ELEMENTS_MWW25A</ddls:description>
     <ddls:package>ZMMWW25A</ddls:package>
     <ddls:objectType>DDLS</ddls:objectType>
   </ddls:metaData>

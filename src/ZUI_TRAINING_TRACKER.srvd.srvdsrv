@@ -1,6 +1,0 @@
-@EndUserText.label: 'Service Definition for Training Tracker'
-define service ZUI_TRAINING_TRACKER_MWW25 {
-  expose ZC_Course_MWW25 as Course;
-  expose ZC_Progress_MWW25 as Progress;
-  expose ZC_Feedback_MWW25 as Feedback;
-}

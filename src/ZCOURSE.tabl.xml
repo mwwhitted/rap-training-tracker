@@ -1,0 +1,17 @@
+@EndUserText.label: 'Course Table'
+@AbapCatalog.enhancementCategory: #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory: #TRANSPARENT
+@AbapCatalog.deliveryClass: #A
+@AbapCatalog.dataMaintenance: #RESTRICTED
+define table zcourse_mww25 {
+  key client       : abap.clnt not null;
+  key course_id    : zde_course_id_mww25 not null;
+  title            : zde_course_title_mww25 not null;
+  level            : zde_course_level_mww25;
+  instructor       : zde_instructor_mww25;
+  created_by       : syuname;
+  created_at       : timestampl;
+  last_changed_by  : syuname;
+  last_changed_at  : timestampl;
+  local_last_changed_at : timestampl;
+}

@@ -1,0 +1,31 @@
+managed implementation in class zbp_i_feedback_mww25 unique;
+strict ( 2 );
+
+define behavior for ZI_Feedback_MWW25 alias Feedback
+persistent table zfeedback_mww25
+lock master
+authorization master ( instance )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+  
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt, LocalLastChangedAt;
+  field ( mandatory ) UserId, CourseId;
+  
+  association _Course { create; }
+
+  mapping for zfeedback_mww25
+  {
+    FeedbackId = feedback_id;
+    UserId = user_id;
+    CourseId = course_id;
+    Comments = comments;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

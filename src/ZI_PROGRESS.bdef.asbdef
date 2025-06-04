@@ -1,0 +1,32 @@
+managed implementation in class zbp_i_progress_mww25 unique;
+strict ( 2 );
+
+define behavior for ZI_Progress_MWW25 alias Progress
+persistent table zprogress_mww25
+lock master
+authorization master ( instance )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+  
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt, LocalLastChangedAt;
+  field ( mandatory ) CourseId, UserId;
+  
+  association _Course { create; }
+
+  mapping for zprogress_mww25
+  {
+    ProgressId = progress_id;
+    CourseId = course_id;
+    UserId = user_id;
+    PercentComplete = percent_complete;
+    Status = status;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

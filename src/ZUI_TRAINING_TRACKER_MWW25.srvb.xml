@@ -1,0 +1,7 @@
+@EndUserText.label: 'Training Tracker Service Binding'
+@OData.entitySet.type: [#PROJECTION]
+define service ZUI_TRAINING_TRACKER_MWW25_O4 {
+  expose ZC_Course_MWW25 as Course;
+  expose ZC_Progress_MWW25 as Progress;
+  expose ZC_Feedback_MWW25 as Feedback;
+}
